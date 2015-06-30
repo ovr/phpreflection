@@ -3,6 +3,7 @@
 namespace Ovr\PHPReflection\Manually\PHP56;
 
 use Ovr\PHPReflection\Manually\AbstractExtension;
+use Ovr\PHPReflection\Types;
 
 class Standard extends AbstractExtension
 {
@@ -18,7 +19,7 @@ class Standard extends AbstractExtension
      */
     protected $functions = array(
         'gettype' => array(
-            'return-type' => 'mixed',
+            'return-type' => Types::MIXED,
             'return-possible-values' => array(
                 'boolean',
                 'integer',
@@ -32,25 +33,25 @@ class Standard extends AbstractExtension
             ),
             'parameters' => array(
                 array(
-                    'type' => 'int',
+                    'type' => Types::INT_TYPE,
                     'required' => true
                 )
             )
         ),
         'floatval' => array(
-            'return-type' => 'double',
+            'return-type' => Types::DOUBLE_TYPE,
             'parameters' => array(
                 array(
-                    'type' => 'mixed',
+                    'type' => Types::MIXED,
                     'required' => true
                 )
             )
         ),
         'boolval' => array(
-            'return-type' => 'boolean',
+            'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
-                    'type' => 'mixed',
+                    'type' => Types::MIXED,
                     'required' => true
                 )
             )

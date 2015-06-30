@@ -3,6 +3,7 @@
 namespace Ovr\PHPReflection\Manually\PHP56;
 
 use Ovr\PHPReflection\Manually\AbstractExtension;
+use Ovr\PHPReflection\Types;
 
 class JSON extends AbstractExtension
 {
@@ -13,43 +14,43 @@ class JSON extends AbstractExtension
      */
     protected $functions = array(
         'json_decode' => array(
-            'return-type' => 'mixed',
+            'return-type' => Types::MIXED,
             'parameters' => array(
                 array(
-                    'type' => 'string',
+                    'type' => Types::INT_TYPE,
                     'required' => true
                 ),
                 array(
-                    'type' => 'assoc',
+                    'type' => Types::BOOLEAN_TYPE,
                     'required' => false,
                     'default' => false
                 ),
                 array(
-                    'type' => 'int',
+                    'type' => Types::INT_TYPE,
                     'required' => false,
                     'default' => 512
                 ),
                 array(
-                    'type' => 'options',
+                    'type' => Types::INT_TYPE,
                     'required' => false,
                     'default' => 0
                 )
             )
         ),
         'json_encode' => array(
-            'return-type' => 'string',
+            'return-type' => Types::STRING_TYPE,
             'parameters' => array(
                 array(
-                    'type' => 'mixed',
+                    'type' => Types::MIXED,
                     'required' => true,
                 ),
                 array(
-                    'type' => 'int',
+                    'type' => Types::INT_TYPE,
                     'required' => false,
                     'default' => 0
                 ),
                 array(
-                    'type' => 'int',
+                    'type' => Types::INT_TYPE,
                     'required' => false,
                     'default' => 512
                 )
