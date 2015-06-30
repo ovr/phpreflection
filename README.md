@@ -3,11 +3,11 @@ PHP Reflection
 
 How to use:
 
-```
+```php
 $core = \Ovr\PHPReflection::factory();
 $functionDefinition = $core->getFunction('floatval');
+
 var_dump($functionDefinition);
-//output
 class Ovr\PHPReflection\FunctionReflection#6 (4) {
   public $name =>
   string(8) "floatval"
@@ -29,7 +29,6 @@ class Ovr\PHPReflection\FunctionReflection#6 (4) {
 
 $functionDefinition = $core->getFunction('gettype');
 var_dump($functionDefinition);
-//output
 class Ovr\PHPReflection\FunctionReflection#6 (4) {
   public $name =>
   string(7) "gettype"
