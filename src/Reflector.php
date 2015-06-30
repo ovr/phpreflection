@@ -5,16 +5,16 @@ namespace Ovr\PHPReflection;
 class Reflector
 {
     /**
-     * @var Manualy\CoreInterface
+     * @var Manually\CoreInterface
      */
-    protected $manualy;
+    protected $manually;
 
     /**
-     * @param Manualy\CoreInterface $manualy
+     * @param Manually\CoreInterface $manually
      */
-    public function __construct(Manualy\CoreInterface $manualy)
+    public function __construct(Manually\CoreInterface $manually)
     {
-        $this->manualy = $manualy;
+        $this->manually = $manually;
     }
 
     /**
@@ -23,7 +23,7 @@ class Reflector
      */
     public function getFunction($name)
     {
-        $reflection = $this->manualy->getFunction($name);
+        $reflection = $this->manually->getFunction($name);
         if ($reflection) {
             return $reflection;
         }

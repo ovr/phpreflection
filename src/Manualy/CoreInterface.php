@@ -1,6 +1,6 @@
 <?php
 
-namespace Ovr\PHPReflection\Manualy;
+namespace Ovr\PHPReflection\Manually;
 
 interface CoreInterface
 {

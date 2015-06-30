@@ -1,8 +1,8 @@
 <?php
 
-namespace Ovr\PHPReflection\Manualy\PHP56;
+namespace Ovr\PHPReflection\Manually\PHP56;
 
-use Ovr\PHPReflection\Manualy\CoreInterface;
+use Ovr\PHPReflection\Manually\CoreInterface;
 
 class Core implements CoreInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ovr\PHPReflection\Manualy\PHP56;
+namespace Ovr\PHPReflection\Manually\PHP56;
 
 use Ovr\PHPReflection\FunctionReflection;
 
