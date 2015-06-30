@@ -4,10 +4,11 @@ PHP Reflection
 How to use:
 
 ```php
-$core = \Ovr\PHPReflection::factory();
-$functionDefinition = $core->getFunction('floatval');
+$reflector = new Ovr\PHPReflection\Reflector(
+    new Ovr\PHPReflection\Manually\PHP56\Core()
+);
 
-var_dump($functionDefinition);
+var_dump($reflector->getFunction('floatval'));
 class Ovr\PHPReflection\FunctionReflection#6 (4) {
   public $name =>
   string(8) "floatval"
@@ -27,8 +28,7 @@ class Ovr\PHPReflection\FunctionReflection#6 (4) {
   string(6) "double"
 }
 
-$functionDefinition = $core->getFunction('gettype');
-var_dump($functionDefinition);
+var_dump($reflector->getFunction('gettype'));
 class Ovr\PHPReflection\FunctionReflection#6 (4) {
   public $name =>
   string(7) "gettype"
