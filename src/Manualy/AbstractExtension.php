@@ -5,7 +5,7 @@ namespace Ovr\PHPReflection\Manually;
 use Ovr\PHPReflection\FunctionReflection;
 use ReflectionExtension;
 
-class AbstractExtension
+abstract class AbstractExtension
 {
     /**
      * @var string

@@ -4,9 +4,7 @@ PHP Reflection
 How to use:
 
 ```php
-$reflector = new Ovr\PHPReflection\Reflector(
-    new Ovr\PHPReflection\Manually\PHP56\Core()
-);
+$reflector = new Reflector(Reflector::manuallyFactory());
 
 var_dump($reflector->getFunction('floatval'));
 class Ovr\PHPReflection\FunctionReflection#6 (4) {

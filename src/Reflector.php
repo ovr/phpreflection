@@ -9,6 +9,7 @@ class Reflector
      */
     protected $manually;
 
+
     /**
      * @param Manually\CoreInterface $manually
      */
@@ -29,5 +30,13 @@ class Reflector
         }
 
         return false;
+    }
+
+    /**
+     * @return Manually\CoreInterface
+     */
+    static public function manuallyFactory()
+    {
+        return new Manually\PHP56\Core();
     }
 }
