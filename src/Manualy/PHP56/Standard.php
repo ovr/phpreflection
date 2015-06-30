@@ -2,6 +2,8 @@
 
 namespace Ovr\PHPReflection\Manualy\PHP56;
 
+use Ovr\PHPReflection\FunctionReflection;
+
 class Standard
 {
     protected $name = 'standard';
@@ -55,7 +57,14 @@ class Standard
     public function getFunction($name)
     {
         if (isset($this->functions[$name])) {
-            return $this->functions[$name];
+            $result = $this->functions[$name];
+
+            return new FunctionReflection(
+                $name,
+                $result['parameters'],
+                $result['return-type'],
+                $result['return-possible-values']
+            );
         }
 
         return false;
