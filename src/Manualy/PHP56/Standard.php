@@ -39,8 +39,15 @@ class Standard
         ),
         'floatval' => array(
             'return-type' => 'double',
-            'return-possible-values' => 'double',
-            'run' => false,
+            'parameters' => array(
+                array(
+                    'type' => 'mixed',
+                    'required' => true
+                )
+            )
+        ),
+        'boolval' => array(
+            'return-type' => 'boolean',
             'parameters' => array(
                 array(
                     'type' => 'mixed',
@@ -63,7 +70,7 @@ class Standard
                 $name,
                 $result['parameters'],
                 $result['return-type'],
-                $result['return-possible-values']
+                isset($result['return-possible-values']) ? $result['return-possible-values'] : null
             );
         }
 
