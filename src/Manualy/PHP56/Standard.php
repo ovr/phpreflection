@@ -2,9 +2,9 @@
 
 namespace Ovr\PHPReflection\Manually\PHP56;
 
-use Ovr\PHPReflection\FunctionReflection;
+use Ovr\PHPReflection\Manually\AbstractExtension;
 
-class Standard
+class Standard extends AbstractExtension
 {
     protected $name = 'standard';
 
@@ -56,24 +56,4 @@ class Standard
             )
         )
     );
-
-    /**
-     * @param $name
-     * @return bool
-     */
-    public function getFunction($name)
-    {
-        if (isset($this->functions[$name])) {
-            $result = $this->functions[$name];
-
-            return new FunctionReflection(
-                $name,
-                $result['parameters'],
-                $result['return-type'],
-                isset($result['return-possible-values']) ? $result['return-possible-values'] : null
-            );
-        }
-
-        return false;
-    }
 }

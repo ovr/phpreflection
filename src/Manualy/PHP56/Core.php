@@ -11,8 +11,8 @@ class Core implements CoreInterface
     public function __construct()
     {
         $this->extensions = new \SplObjectStorage();
-        $this->extensions
-            ->attach(new Standard());
+        $this->extensions->attach(new Standard());
+        $this->extensions->attach(new JSON());
     }
 
     public function getFunction($name)
