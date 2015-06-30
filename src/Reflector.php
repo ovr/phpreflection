@@ -5,14 +5,14 @@ namespace Ovr\PHPReflection;
 class Reflector
 {
     /**
-     * @var Manualy\PHP56\Core
+     * @var Manualy\CoreInterface
      */
     protected $manualy;
 
     /**
-     * @param Manualy\PHP56\Core $manualy
+     * @param Manualy\CoreInterface $manualy
      */
-    public function __construct(Manualy\PHP56\Core $manualy)
+    public function __construct(Manualy\CoreInterface $manualy)
     {
         $this->manualy = $manualy;
     }

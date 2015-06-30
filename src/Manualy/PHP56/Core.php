@@ -2,7 +2,9 @@
 
 namespace Ovr\PHPReflection\Manualy\PHP56;
 
-class Core
+use Ovr\PHPReflection\Manualy\CoreInterface;
+
+class Core implements CoreInterface
 {
     protected $extensions;
 
