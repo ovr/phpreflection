@@ -1,0 +1,19 @@
+{
+    "name": "ovr/phpreflection",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Patsura",
+            "email": "talk@dmtry.me"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Ovr\\PHPReflection\\": "src/"
+        }
+    }
+}
