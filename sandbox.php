@@ -4,8 +4,6 @@ use Ovr\PHPReflection\Reflector;
 
 include_once __DIR__ . '/vendor/autoload.php';
 
-var_dump(get_extension_funcs('standard'));
-
 $reflector = new Reflector(Reflector::manuallyFactory());
 $reflection = $reflector->getFunction('floatval');
 var_dump($reflection->getNumberOfParameters());
