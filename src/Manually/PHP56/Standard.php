@@ -181,5 +181,19 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'cli_set_process_title' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::STRING_TYPE,
+                    'required' => true,
+                    'name' => 'title'
+                )
+            )
+        ),
+        'cli_get_process_title' => array(
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array()
+        ),
     );
 }

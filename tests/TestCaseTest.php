@@ -7,7 +7,7 @@ use Ovr\PHPReflection\Reflector;
 class TestCaseTest extends TestCase
 {
     protected $reflector;
-    
+
     protected function getReflector()
     {
         if ($this->reflector) {
