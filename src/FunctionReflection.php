@@ -38,7 +38,7 @@ class FunctionReflection
      * @param array $parameters
      * @return mixed
      */
-    public function run(array $parameters = [])
+    public function run(array $parameters = array())
     {
         if (count($parameters) < $this->getNumberOfRequiredParameters()) {
             throw new RuntimeException("It's not possible to run function '{$this->name}' via count of parameters < requiredParameters");
