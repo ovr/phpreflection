@@ -9,7 +9,6 @@ class Reflector
      */
     protected $manually;
 
-
     /**
      * @param Manually\CoreInterface $manually
      */

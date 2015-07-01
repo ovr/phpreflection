@@ -2,6 +2,8 @@
 
 namespace Ovr\PHPReflection;
 
+use RuntimeException;
+
 class FunctionReflection
 {
     public $name;
@@ -28,6 +30,21 @@ class FunctionReflection
     public function getNumberOfParameters()
     {
         return count($this->parameters);
+    }
+
+    /**
+     * Run function and return result of it
+     *
+     * @param array $parameters
+     * @return mixed
+     */
+    public function run(array $parameters = [])
+    {
+        if ($parameters < $this->getNumberOfRequiredParameters()) {
+            throw new RuntimeException("It's not possible to run function '{$this->name}' via count of $parameters < $requiredParameters");
+        }
+
+        return call_user_func($this->name, $parameters);
     }
 
     /**
