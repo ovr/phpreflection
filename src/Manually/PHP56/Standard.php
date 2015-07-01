@@ -181,6 +181,22 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'count' => array(
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true,
+                    'name' => 'array_or_countable'
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'mode',
+                    'default' => COUNT_NORMAL
+                )
+            )
+        ),
         'cli_set_process_title' => array(
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
