@@ -58,6 +58,16 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'usleep' => array(
+            'return-type' => Types::VOID_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => true,
+                    'name' => 'micro_seconds'
+                )
+            )
+        ),
         'gettype' => array(
             'return-type' => Types::MIXED,
             'return-possible-values' => array(
