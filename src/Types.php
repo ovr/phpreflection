@@ -13,16 +13,35 @@ class Types
     const NUMBER = self::INT_TYPE | self::DOUBLE_TYPE;
 
     const BOOLEAN_TYPE = 1 << 4;
-
-    const ARRAY_TYPE = 1 << 5;
+    =const ARRAY_TYPE = 1 << 5;
 
     const RESOURCE_TYPE = 1 << 6;
 
     const OBJECT_TYPE = 1 << 7;
+
+    const NULL_TYPE = 1 << 8;
 
     const VOID_TYPE = -1;
 
     const UNKNOWN_TYPE = -2;
 
     const MIXED = self::INT_TYPE | self::DOUBLE_TYPE | self::STRING_TYPE | self::BOOLEAN_TYPE | self::ARRAY_TYPE | self::RESOURCE_TYPE | self::OBJECT_TYPE;
+
+    /**
+     * @param $var
+     * @return int
+     */
+    public static function getType($var)
+    {
+        switch (gettype($var)) {
+            case 'integer':
+                return self::INT_TYPE;
+                break;
+            case 'double':
+                return self::DOUBLE_TYPE;
+                break;
+        }
+
+        return self::UNKNOWN_TYPE;
+    }
 }
