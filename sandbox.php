@@ -5,11 +5,11 @@ use Ovr\PHPReflection\Reflector;
 include_once __DIR__ . '/vendor/autoload.php';
 
 $reflector = new Reflector(Reflector::manuallyFactory());
-$freflection = $reflector->getFunction('floatval');
-var_dump($freflection->getNumberOfParameters());
-var_dump($freflection->getNumberOfRequiredParameters());
-var_dump($freflection->run(array(1)));
+$reflection = $reflector->getFunction('floatval');
+var_dump($reflection->getNumberOfParameters());
+var_dump($reflection->getNumberOfRequiredParameters());
+var_dump($reflection->run(array(1)));
 
-$freflection = new ReflectionFunction('floatval');
-var_dump($freflection->getNumberOfParameters());
-var_dump($freflection->getNumberOfRequiredParameters());
+$reflection = new ReflectionFunction('floatval');
+var_dump($reflection->getNumberOfParameters());
+var_dump($reflection->getNumberOfRequiredParameters());

@@ -13,7 +13,7 @@ class Types
     const NUMBER = self::INT_TYPE | self::DOUBLE_TYPE;
 
     const BOOLEAN_TYPE = 1 << 4;
-    
+
     const ARRAY_TYPE = 1 << 5;
 
     const RESOURCE_TYPE = 1 << 6;
