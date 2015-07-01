@@ -10,7 +10,7 @@ abstract class AbstractExtension
     /**
      * @var string
      */
-    protected $name = 'unknown';
+    protected $name = 'standard';
 
     /**
      * @var array
@@ -23,6 +23,11 @@ abstract class AbstractExtension
     public function isEnabled()
     {
         return extension_loaded($this->name);
+    }
+
+    public function getDefinedFunctions()
+    {
+        return get_extension_funcs($this->name);
     }
 
     /**
