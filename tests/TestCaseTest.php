@@ -19,10 +19,13 @@ class TestCaseTest extends TestCase
 
     public function getFunctions()
     {
-        return array(
-            array('boolval'),
-            array('floatval'),
-        );
+        $dataProvider = array();
+
+        foreach (get_extension_funcs('standard') as $function) {
+            $dataProvider[] = array($function);
+        }
+
+        return $dataProvider;
     }
 
     /**
