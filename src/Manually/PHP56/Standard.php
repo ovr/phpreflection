@@ -9,6 +9,9 @@ class Standard extends AbstractExtension
 {
     protected $name = 'standard';
 
+    /**
+     * @return bool
+     */
     public function isEnabled()
     {
         return true;

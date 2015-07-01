@@ -8,6 +8,7 @@ use ReflectionExtension;
 abstract class AbstractExtension
 {
     /**
+     * @abstract
      * @var string
      */
     protected $name = 'standard';
