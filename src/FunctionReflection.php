@@ -40,7 +40,7 @@ class FunctionReflection
      */
     public function run(array $parameters = [])
     {
-        if ($parameters < $this->getNumberOfRequiredParameters()) {
+        if (count($parameters) < $this->getNumberOfRequiredParameters()) {
             throw new RuntimeException("It's not possible to run function '{$this->name}' via count of $parameters < $requiredParameters");
         }
 
