@@ -19,8 +19,10 @@ class Reflector
     }
 
     /**
+     * Get FunctionReflection by $name
+     *
      * @param $name
-     * @return bool
+     * @return bool|FunctionReflection
      */
     public function getFunction($name)
     {

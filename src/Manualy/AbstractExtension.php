@@ -43,7 +43,7 @@ abstract class AbstractExtension
 
     /**
      * @param $name
-     * @return bool
+     * @return FunctionReflection|bool
      */
     public function getFunction($name)
     {
