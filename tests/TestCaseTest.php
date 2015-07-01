@@ -7,7 +7,7 @@ use Ovr\PHPReflection\Reflector;
 class TestCaseTest extends TestCase
 {
     protected $reflector;
-
+    
     protected function getReflector()
     {
         if ($this->reflector) {
@@ -20,6 +20,10 @@ class TestCaseTest extends TestCase
     public function getFunctions()
     {
         $dataProvider = array();
+
+        if (defined('HHVM_VERSION')) {
+            $this->markTestSkipped('HHVM is not supported for testing now');
+        }
 
         foreach (get_extension_funcs('standard') as $function) {
             $dataProvider[] = array($function);
