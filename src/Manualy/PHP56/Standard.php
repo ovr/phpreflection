@@ -55,6 +55,78 @@ class Standard extends AbstractExtension
                     'required' => true
                 )
             )
-        )
+        ),
+        'is_array' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_bool' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_double' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_float' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_int' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_integer' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_long' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
+        'is_null' => array(
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
     );
 }
