@@ -37,7 +37,7 @@ class Reflector
     /**
      * @return Manually\CoreInterface
      */
-    static public function manuallyFactory()
+    public static function manuallyFactory()
     {
         return new Manually\PHP56\Core();
     }
