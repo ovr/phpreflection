@@ -4,29 +4,59 @@ namespace Ovr\PHPReflection;
 
 class Types
 {
-    const INT_TYPE = 1 << 1;
+    /**
+     * 1 << 1
+     */
+    const INT_TYPE = 2;
 
-    const DOUBLE_TYPE = 1 << 2;
+    /**
+     * 1 << 2
+     */
+    const DOUBLE_TYPE = 4;
 
-    const STRING_TYPE = 1 << 3;
+    /**
+     * 1 << 3
+     */
+    const STRING_TYPE = 8;
 
-    const NUMBER = self::INT_TYPE | self::DOUBLE_TYPE;
+    /**
+     * self::INT_TYPE | self::DOUBLE_TYPE
+     */
+    const NUMBER = 6;
 
-    const BOOLEAN_TYPE = 1 << 4;
+    /**
+     * 1 << 4
+     */
+    const BOOLEAN_TYPE = 16;
 
-    const ARRAY_TYPE = 1 << 5;
+    /**
+     * 1 << 5
+     */
+    const ARRAY_TYPE = 32;
 
-    const RESOURCE_TYPE = 1 << 6;
+    /**
+     * 1 << 6
+     */
+    const RESOURCE_TYPE = 64;
 
-    const OBJECT_TYPE = 1 << 7;
+    /**
+     * 1 << 7
+     */
+    const OBJECT_TYPE = 128;
 
-    const NULL_TYPE = 1 << 8;
+    /**
+     * 1 << 8
+     */
+    const NULL_TYPE = 256;
 
     const VOID_TYPE = -1;
 
     const UNKNOWN_TYPE = -2;
 
-    const MIXED = self::INT_TYPE | self::DOUBLE_TYPE | self::STRING_TYPE | self::BOOLEAN_TYPE | self::ARRAY_TYPE | self::RESOURCE_TYPE | self::OBJECT_TYPE;
+    /**
+     * self::INT_TYPE | self::DOUBLE_TYPE | self::STRING_TYPE | self::BOOLEAN_TYPE | self::ARRAY_TYPE | self::RESOURCE_TYPE | self::OBJECT_TYPE | self::NULL_TYPE
+     */
+    const MIXED = 510;
 
     /**
      * @param $var
