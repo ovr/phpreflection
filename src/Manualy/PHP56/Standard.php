@@ -18,6 +18,46 @@ class Standard extends AbstractExtension
      * @var array
      */
     protected $functions = array(
+        'constant' => array(
+            'return-type' => Types::MIXED,
+            'parameters' => array(
+                array(
+                    'type' => Types::STRING_TYPE,
+                    'required' => true,
+                    'name' => 'name'
+                )
+            )
+        ),
+        'bin2hex' => array(
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::STRING_TYPE,
+                    'required' => true,
+                    'name' => 'str'
+                )
+            )
+        ),
+        'hex2bin' => array(
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::STRING_TYPE,
+                    'required' => true,
+                    'name' => 'str'
+                )
+            )
+        ),
+        'sleep' => array(
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => true,
+                    'name' => 'seconds'
+                )
+            )
+        ),
         'gettype' => array(
             'return-type' => Types::MIXED,
             'return-possible-values' => array(
