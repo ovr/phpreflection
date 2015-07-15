@@ -73,7 +73,7 @@ class FunctionReflection
         $count = 0;
 
         foreach ($this->parameters as $parameter) {
-            if (isset($parameter['required']) && $parameter['required']) {
+            if ($parameter->isRequired()) {
                 $count++;
             }
         }

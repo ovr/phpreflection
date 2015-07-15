@@ -59,7 +59,7 @@ abstract class AbstractExtension
 
             if (count($result['parameters']) > 0) {
                 foreach ($result['parameters'] as $key => $parameter) {
-                    $result['parameters'][$key] = ReflectionParameter::hydrateFromArrayDefinition($result['parameters']);
+                    $result['parameters'][$key] = ReflectionParameter::hydrateFromArrayDefinition($result['parameters'][$key]);
                 }
             }
 
