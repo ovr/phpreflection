@@ -3,6 +3,7 @@
 namespace Ovr\PHPReflection\Manually;
 
 use Ovr\PHPReflection\FunctionReflection;
+use Ovr\PHPReflection\ReflectionParameter;
 use ReflectionExtension;
 
 abstract class AbstractExtension
@@ -55,6 +56,12 @@ abstract class AbstractExtension
     {
         if (isset($this->functions[$name])) {
             $result = $this->functions[$name];
+
+            if (count($result['parameters']) > 0) {
+                foreach ($result['parameters'] as $key => $parameter) {
+                    $result['parameters'][$key] = ReflectionParameter::hydrateFromArrayDefinition($result['parameters']);
+                }
+            }
 
             return new FunctionReflection(
                 $name,
