@@ -6,13 +6,25 @@ use RuntimeException;
 
 class FunctionReflection
 {
-    public $name;
+    /**
+     * @var string
+     */
+    protected $name;
 
-    public $parameters;
+    /**
+     * @var array
+     */
+    protected $parameters;
 
-    public $returnType;
+    /**
+     * @var int|null
+     */
+    protected $returnType;
 
-    public $returnPossibleValue;
+    /**
+     * @var int|null
+     */
+    protected $returnPossibleValue;
 
     public function __construct($name, $parameters, $returnType, $returnPossibleValue)
     {
