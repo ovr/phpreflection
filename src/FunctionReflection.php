@@ -80,4 +80,12 @@ class FunctionReflection
 
         return $count;
     }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 }
