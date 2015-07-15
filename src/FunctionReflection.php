@@ -12,7 +12,7 @@ class FunctionReflection
     protected $name;
 
     /**
-     * @var array
+     * @var ReflectionParameter[]
      */
     protected $parameters;
 
@@ -26,7 +26,7 @@ class FunctionReflection
      */
     protected $returnPossibleValue;
 
-    public function __construct($name, $parameters, $returnType, $returnPossibleValue)
+    public function __construct($name, array $parameters, $returnType, $returnPossibleValue)
     {
         $this->name = $name;
         $this->parameters = $parameters;
