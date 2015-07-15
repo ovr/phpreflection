@@ -73,7 +73,19 @@ class FunctionReflection
             throw new RuntimeException("It's not possible to run function '{$this->name}' via count of parameters < requiredParameters");
         }
 
+        if (!$this->isRunnable()) {
+            throw new RuntimeException("It's not possible to run function '{$this->name}' because it's not runnable via type");
+        }
+
         return call_user_func($this->name, $parameters);
+    }
+
+    /**
+     * @return int
+     */
+    public function isRunnable()
+    {
+        return $this->type = self::TYPE_RUNNABLE;
     }
 
     /**
