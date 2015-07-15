@@ -88,4 +88,14 @@ class FunctionReflection
     {
         return $this->name;
     }
+
+    /**
+     * @return bool
+     */
+    public function isDisabled()
+    {
+        $isInDisabledFunctions = false !== strpos(ini_get('disable_functions'), $this->name);
+
+        return !($isInDisabledFunctions);
+    }
 }
