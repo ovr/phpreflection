@@ -2,6 +2,7 @@
 
 namespace Ovr\PHPReflection\Manually\PHP56;
 
+use Ovr\PHPReflection\FunctionReflection;
 use Ovr\PHPReflection\Manually\AbstractExtension;
 use Ovr\PHPReflection\Types;
 
@@ -14,6 +15,7 @@ class JSON extends AbstractExtension
      */
     protected $functions = array(
         'json_decode' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::MIXED,
             'parameters' => array(
                 array(
@@ -38,6 +40,7 @@ class JSON extends AbstractExtension
             )
         ),
         'json_encode' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::STRING_TYPE,
             'parameters' => array(
                 array(

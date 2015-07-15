@@ -6,6 +6,18 @@ use RuntimeException;
 
 class FunctionReflection
 {
+    const TYPE_UNDEFINED = 0;
+
+    /**
+     * It's can be exec in runtime because it's safe
+     */
+    const TYPE_RUNNABLE = 1;
+
+    /**
+     * Is debugging function
+     */
+    const TYPE_DEBUGGING = 2;
+
     /**
      * @var string
      */
@@ -22,11 +34,16 @@ class FunctionReflection
     protected $returnType;
 
     /**
+     * @var int
+     */
+    protected $type = self::TYPE_UNDEFINED;
+
+    /**
      * @var int|null
      */
     protected $returnPossibleValue;
 
-    public function __construct($name, array $parameters, $returnType, $returnPossibleValue)
+    public function __construct($name, array $parameters, $type = FunctionReflection::TYPE_UNDEFINED, $returnType = null, $returnPossibleValue = null)
     {
         $this->name = $name;
         $this->parameters = $parameters;

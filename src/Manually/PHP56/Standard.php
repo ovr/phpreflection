@@ -2,6 +2,7 @@
 
 namespace Ovr\PHPReflection\Manually\PHP56;
 
+use Ovr\PHPReflection\FunctionReflection;
 use Ovr\PHPReflection\Manually\AbstractExtension;
 use Ovr\PHPReflection\Types;
 
@@ -22,6 +23,7 @@ class Standard extends AbstractExtension
      */
     protected $functions = array(
         'constant' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::MIXED,
             'parameters' => array(
                 array(
@@ -32,6 +34,7 @@ class Standard extends AbstractExtension
             )
         ),
         'bin2hex' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::STRING_TYPE,
             'parameters' => array(
                 array(
@@ -42,6 +45,7 @@ class Standard extends AbstractExtension
             )
         ),
         'hex2bin' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::STRING_TYPE,
             'parameters' => array(
                 array(
@@ -52,6 +56,7 @@ class Standard extends AbstractExtension
             )
         ),
         'sleep' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::INT_TYPE,
             'parameters' => array(
                 array(
@@ -62,6 +67,7 @@ class Standard extends AbstractExtension
             )
         ),
         'usleep' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::VOID_TYPE,
             'parameters' => array(
                 array(
@@ -72,6 +78,7 @@ class Standard extends AbstractExtension
             )
         ),
         'gettype' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::MIXED,
             'return-possible-values' => array(
                 'boolean',
@@ -92,6 +99,7 @@ class Standard extends AbstractExtension
             )
         ),
         'floatval' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::DOUBLE_TYPE,
             'parameters' => array(
                 array(
@@ -101,6 +109,7 @@ class Standard extends AbstractExtension
             )
         ),
         'boolval' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -110,6 +119,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_array' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -119,6 +129,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_bool' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -128,6 +139,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_double' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -137,6 +149,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_float' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -146,6 +159,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_int' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -155,6 +169,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_integer' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -164,6 +179,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_long' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -173,6 +189,7 @@ class Standard extends AbstractExtension
             )
         ),
         'is_null' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -182,6 +199,7 @@ class Standard extends AbstractExtension
             )
         ),
         'count' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::INT_TYPE,
             'parameters' => array(
                 array(
@@ -198,6 +216,7 @@ class Standard extends AbstractExtension
             )
         ),
         'cli_set_process_title' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::BOOLEAN_TYPE,
             'parameters' => array(
                 array(
@@ -208,6 +227,7 @@ class Standard extends AbstractExtension
             )
         ),
         'cli_get_process_title' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::STRING_TYPE,
             'parameters' => array()
         ),

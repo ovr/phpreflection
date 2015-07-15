@@ -66,6 +66,7 @@ abstract class AbstractExtension
             return new FunctionReflection(
                 $name,
                 $result['parameters'],
+                $result['type'],
                 $result['return-type'],
                 isset($result['return-possible-values']) ? $result['return-possible-values'] : null
             );
