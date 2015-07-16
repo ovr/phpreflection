@@ -215,6 +215,72 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'abs' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::NUMBER,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true,
+                    'name' => 'number'
+                )
+            )
+        ),
+        'acos' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
+        'cos' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
+        'sin' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
+        'asin' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
+        'sqrt' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
         'cli_set_process_title' => array(
             'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::BOOLEAN_TYPE,
