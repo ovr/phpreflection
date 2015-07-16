@@ -77,7 +77,7 @@ class FunctionReflection
             throw new RuntimeException("It's not possible to run function '{$this->name}' because it's not runnable via type");
         }
 
-        return call_user_func($this->name, $parameters);
+        return call_user_func_array($this->name, $parameters);
     }
 
     /**
