@@ -127,4 +127,20 @@ class FunctionReflection
 
         return !($isInDisabledFunctions);
     }
+
+    /**
+     * @return int|null
+     */
+    public function getReturnType()
+    {
+        return $this->returnType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
 }
