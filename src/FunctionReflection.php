@@ -143,4 +143,20 @@ class FunctionReflection
     {
         return $this->type;
     }
+
+    /**
+     * @return ReflectionParameter[]
+     */
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
+
+    /**
+     * @return ReflectionParameter|boolean
+     */
+    public function getParameter($key)
+    {
+        return $this->parameters[$key];
+    }
 }
