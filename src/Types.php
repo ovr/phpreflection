@@ -47,17 +47,22 @@ class Types
     /**
      * 1 << 8
      */
-    const NULL_TYPE = 256;
+    const CALLABLE_TYPE = 256;
+
+    /**
+     * 1 << 9
+     */
+    const NULL_TYPE = 512;
+    
+    /**
+     * self::INT_TYPE | self::DOUBLE_TYPE | self::STRING_TYPE | self::BOOLEAN_TYPE | self::ARRAY_TYPE | self::RESOURCE_TYPE | self::OBJECT_TYPE | self::CALLABLE_TYPE | self::NULL_TYPE
+     */
+    const MIXED = 1022;
 
     const VOID_TYPE = -1;
 
     const UNKNOWN_TYPE = -2;
-
-    /**
-     * self::INT_TYPE | self::DOUBLE_TYPE | self::STRING_TYPE | self::BOOLEAN_TYPE | self::ARRAY_TYPE | self::RESOURCE_TYPE | self::OBJECT_TYPE | self::NULL_TYPE
-     */
-    const MIXED = 510;
-
+    
     /**
      * @param $var
      * @return int
