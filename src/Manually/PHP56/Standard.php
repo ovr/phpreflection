@@ -292,6 +292,38 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'rand' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'min'
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'max'
+                )
+            )
+        ),
+        'mt_rand' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'min'
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'max'
+                )
+            )
+        ),
         'cli_get_process_title' => array(
             'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::STRING_TYPE,
