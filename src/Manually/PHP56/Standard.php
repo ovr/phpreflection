@@ -324,6 +324,28 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'getrandmax' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array()
+        ),
+        'mt_getrandmax' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array()
+        ),
+        'srand' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::VOID_TYPE,
+            'parameters' => array(
+                array(
+                    'name' => 'seed',
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'default' => null
+                )
+            )
+        ),
         'cli_get_process_title' => array(
             'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::STRING_TYPE,
