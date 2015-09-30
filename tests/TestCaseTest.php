@@ -49,6 +49,10 @@ class TestCaseTest extends TestCase
             if ($reflection->getNumberOfParameters()) {
                 foreach ($reflection->getParameters() as $key => $parameter) {
                     $this->assertSame($parameter, $reflection->getParameter($key));
+
+                    $this->assertNotEmpty($parameter->getName());
+                    $this->assertInternalType('integer', $parameter->getType());
+                    $this->assertInternalType('boolean', $parameter->isRequired());
                 }
             }
 
