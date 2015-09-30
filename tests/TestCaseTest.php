@@ -46,6 +46,12 @@ class TestCaseTest extends TestCase
             $this->assertSame($standartFunctionReflection->getNumberOfRequiredParameters(), $reflection->getNumberOfRequiredParameters());
             $this->assertSame($standartFunctionReflection->getNumberOfParameters(), $reflection->getNumberOfParameters());
 
+            if ($reflection->getNumberOfParameters()) {
+                foreach ($reflection->getParameters() as $key => $parameter) {
+                    $this->assertSame($parameter, $reflection->getParameter($key));
+                }
+            }
+
             return true;
         }
 
