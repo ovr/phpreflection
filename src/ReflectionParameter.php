@@ -9,13 +9,19 @@ class ReflectionParameter
      */
     protected $name;
 
+    /**
+     * @var integer
+     */
     protected $type;
 
+    /**
+     * @var boolean
+     */
     protected $required;
 
     /**
-     * @param $type
-     * @param $required
+     * @param integer $type
+     * @param boolean $required
      * @param string $name
      */
     public function __construct($type, $required, $name = 'name')
