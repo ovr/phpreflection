@@ -237,6 +237,39 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'acosh' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
+        'asin' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
+        'asinh' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'arg'
+                )
+            )
+        ),
         'cos' => array(
             'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::DOUBLE_TYPE,
@@ -249,17 +282,6 @@ class Standard extends AbstractExtension
             )
         ),
         'sin' => array(
-            'type' => FunctionReflection::TYPE_RUNNABLE,
-            'return-type' => Types::DOUBLE_TYPE,
-            'parameters' => array(
-                array(
-                    'type' => Types::DOUBLE_TYPE,
-                    'required' => true,
-                    'name' => 'arg'
-                )
-            )
-        ),
-        'asin' => array(
             'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::DOUBLE_TYPE,
             'parameters' => array(
