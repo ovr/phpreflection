@@ -108,6 +108,22 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'intdiv' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'name' => 'numerator',
+                    'required' => true
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'name' => 'divisor',
+                    'required' => true
+                )
+            )
+        ),
         'boolval' => array(
             'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::BOOLEAN_TYPE,
