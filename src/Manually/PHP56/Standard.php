@@ -303,6 +303,17 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'is_nan' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::DOUBLE_TYPE,
+                    'required' => true,
+                    'name' => 'val'
+                )
+            )
+        ),
         'cli_set_process_title' => array(
             'type' => FunctionReflection::TYPE_UNDEFINED,
             'return-type' => Types::BOOLEAN_TYPE,
