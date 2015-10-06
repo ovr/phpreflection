@@ -215,6 +215,23 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'sizeof' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true,
+                    'name' => 'array_or_countable'
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'mode',
+                    'default' => COUNT_NORMAL
+                )
+            )
+        ),
         'abs' => array(
             'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::NUMBER,
