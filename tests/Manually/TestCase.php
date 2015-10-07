@@ -1,13 +1,24 @@
 <?php
 
-namespace Tests;
+namespace Tests\Manully;
 
 use Ovr\PHPReflection\Reflector;
 
-class TestCaseTest extends TestCase
+abstract class TestCase extends \Tests\TestCase
 {
+    /**
+     * @var Reflector|null
+     */
     protected $reflector;
 
+    /**
+     * @return string
+     */
+    abstract protected function getExtensionName();
+
+    /**
+     * @return Reflector
+     */
     protected function getReflector()
     {
         if ($this->reflector) {
@@ -17,6 +28,9 @@ class TestCaseTest extends TestCase
         return $this->reflector = new Reflector(Reflector::manuallyFactory());
     }
 
+    /**
+     * @return array
+     */
     public function getFunctions()
     {
         $dataProvider = array();
@@ -35,7 +49,8 @@ class TestCaseTest extends TestCase
     /**
      * @dataProvider getFunctions
      *
-     * @param $functionName
+     * @param string $functionName
+     * @return bool
      */
     public function testManuallyDb($functionName)
     {
