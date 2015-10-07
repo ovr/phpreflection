@@ -59,5 +59,15 @@ class JSON extends AbstractExtension
                 )
             )
         ),
+        'json_last_error_msg' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array()
+        ),
+        'json_last_error' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array()
+        )
     );
 }
