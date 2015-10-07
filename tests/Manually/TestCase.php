@@ -39,7 +39,7 @@ abstract class TestCase extends \Tests\TestCase
             $this->markTestSkipped('HHVM is not supported for testing now');
         }
 
-        foreach (get_extension_funcs('standard') as $function) {
+        foreach (get_extension_funcs($this->getExtensionName()) as $function) {
             $dataProvider[] = array($function);
         }
 
