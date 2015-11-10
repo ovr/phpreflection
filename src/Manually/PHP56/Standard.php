@@ -114,6 +114,16 @@ class Standard extends AbstractExtension
                 )
             )
         ),
+        'intval' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::INT_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true
+                )
+            )
+        ),
         'floatval' => array(
             'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::DOUBLE_TYPE,
