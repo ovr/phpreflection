@@ -98,16 +98,6 @@ class Standard extends AbstractExtension
                 )
             )
         ),
-        'floatval' => array(
-            'type' => FunctionReflection::TYPE_RUNNABLE,
-            'return-type' => Types::DOUBLE_TYPE,
-            'parameters' => array(
-                array(
-                    'type' => Types::MIXED,
-                    'required' => true
-                )
-            )
-        ),
         'intdiv' => array(
             'type' => FunctionReflection::TYPE_RUNNABLE,
             'return-type' => Types::INT_TYPE,
@@ -120,6 +110,16 @@ class Standard extends AbstractExtension
                 array(
                     'type' => Types::INT_TYPE,
                     'name' => 'divisor',
+                    'required' => true
+                )
+            )
+        ),
+        'floatval' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::DOUBLE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::MIXED,
                     'required' => true
                 )
             )
