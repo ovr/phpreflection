@@ -1,5 +1,6 @@
 PHP Reflection
 ==============
+[![Build Status](https://travis-ci.org/ovr/phpreflection.svg?branch=master)](https://travis-ci.org/ovr/phpreflection)
 
 # Function reflection
 
