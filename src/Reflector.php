@@ -38,6 +38,10 @@ class Reflector
      */
     public static function manuallyFactory()
     {
+        if (version_compare(PHP_VERSION, '7.0.0') > 0) {
+            return new Manually\PHP70\Core();
+        }
+
         return new Manually\PHP56\Core();
     }
 }
