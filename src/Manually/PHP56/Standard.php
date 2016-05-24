@@ -120,7 +120,14 @@ class Standard extends AbstractExtension
             'parameters' => array(
                 array(
                     'type' => Types::MIXED,
-                    'required' => true
+                    'required' => true,
+                    'name' => 'var'
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'var',
+                    'default' => 10
                 )
             )
         ),
