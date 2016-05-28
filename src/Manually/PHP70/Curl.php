@@ -164,5 +164,27 @@ class Curl extends AbstractExtension
                 )
             )
         ),
+        'curl_strerror' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => true,
+                    'name' => 'errornum'
+                )
+            )
+        ),
+        'curl_multi_strerror' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => true,
+                    'name' => 'errornum'
+                )
+            )
+        ),
     );
 }
