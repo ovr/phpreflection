@@ -1,6 +1,7 @@
 {
     "name": "ovr/phpreflection",
     "type": "library",
+    "description": "Advanced reflection for PHP, g by own database with all description",
     "license": "MIT",
     "authors": [
         {
