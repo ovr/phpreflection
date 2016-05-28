@@ -1,7 +1,7 @@
 {
     "name": "ovr/phpreflection",
     "type": "library",
-    "description": "Advanced reflection for PHP, g by own database with all description",
+    "description": "Advanced reflection for PHP, powered by own database with all description",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4.8",
-        "squizlabs/php_codesniffer": "~2.3.3"
+        "squizlabs/php_codesniffer": "~2.6"
     },
     "autoload": {
         "psr-4": {
