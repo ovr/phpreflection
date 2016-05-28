@@ -102,6 +102,30 @@ class Curl extends AbstractExtension
                     'default' => 0
                 )
             )
-        )
+        ),
+        'curl_init' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::RESOURCE_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::STRING_TYPE,
+                    'required' => false,
+                    'name' => 'url',
+                    'default' => null
+                )
+            )
+        ),
+        'curl_version' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::ARRAY_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => false,
+                    'name' => 'age',
+                    'default' => 3 // CURLVERSION_NOW
+                )
+            )
+        ),
     );
 }
