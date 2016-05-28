@@ -25,12 +25,7 @@ class Reflector
      */
     public function getFunction($name)
     {
-        $reflection = $this->manually->getFunction($name);
-        if ($reflection) {
-            return $reflection;
-        }
-
-        return false;
+        return $this->manually->getFunction($name);
     }
 
     /**
