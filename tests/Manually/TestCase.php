@@ -17,7 +17,7 @@ abstract class TestCase extends \Tests\TestCase
     abstract protected function getExtensionName();
 
     /**
-     * @return Reflector
+     * @return 
      */
     protected function getReflector()
     {
@@ -33,47 +33,57 @@ abstract class TestCase extends \Tests\TestCase
      */
     public function getFunctions()
     {
-        $dataProvider = array();
-
         if (defined('HHVM_VERSION')) {
-            $this->markTestSkipped('HHVM is not supported for testing now');
+            $extension = $this->getReflector()->getCore()->getExtension($this->getExtensionName());
+            foreach ($extension->getFunctionNames() as $function) {
+                yield [$function];
+            }
+        } else {
+            foreach (get_extension_funcs($this->getExtensionName()) as $function) {
+                yield [$function];
+            }
         }
-
-        foreach (get_extension_funcs($this->getExtensionName()) as $function) {
-            $dataProvider[] = array($function);
-        }
-
-        return $dataProvider;
     }
 
     /**
      * @dataProvider getFunctions
      *
      * @param string $functionName
-     * @return bool
      */
     public function testManuallyDb($functionName)
     {
         $reflection = $this->getReflector()->getFunction($functionName);
         if ($reflection) {
-            $standartFunctionReflection = new \ReflectionFunction($functionName);
+            try {
+                $standardFunctionReflection = new \ReflectionFunction($functionName);
+            } catch (\ReflectionException $e) {
+                parent::markTestSkipped('Function doest not exist');
+                return;
+            }
 
-            $this->assertSame($standartFunctionReflection->getNumberOfRequiredParameters(), $reflection->getNumberOfRequiredParameters());
-            $this->assertSame($standartFunctionReflection->getNumberOfParameters(), $reflection->getNumberOfParameters());
+            parent::assertSame(
+                $standardFunctionReflection->getNumberOfRequiredParameters(),
+                $reflection->getNumberOfRequiredParameters()
+            );
+
+            parent::assertSame(
+                $standardFunctionReflection->getNumberOfParameters(),
+                $reflection->getNumberOfParameters()
+            );
 
             if ($reflection->getNumberOfParameters()) {
                 foreach ($reflection->getParameters() as $key => $parameter) {
-                    $this->assertSame($parameter, $reflection->getParameter($key));
+                    parent::assertSame($parameter, $reflection->getParameter($key));
 
-                    $this->assertNotEmpty($parameter->getName());
-                    $this->assertInternalType('integer', $parameter->getType());
-                    $this->assertInternalType('boolean', $parameter->isRequired());
+                    parent::assertNotEmpty($parameter->getName());
+                    parent::assertInternalType('integer', $parameter->getType());
+                    parent::assertInternalType('boolean', $parameter->isRequired());
                 }
             }
 
-            return true;
+            return;
         }
 
-        $this->markTestSkipped('Unknown manually reflection for function: ' . $functionName);
+        parent::markTestSkipped('Unknown manually reflection for function: ' . $functionName);
     }
 }
