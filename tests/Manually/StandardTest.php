@@ -1,8 +1,6 @@
 <?php
 
-    namespace Tests\Manully;
-
-use Ovr\PHPReflection\Reflector;
+namespace Tests\Manully;
 
 class StandardTest extends TestCase
 {

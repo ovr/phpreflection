@@ -2,8 +2,6 @@
 
 namespace Tests\Manully;
 
-use Ovr\PHPReflection\Reflector;
-
 class JsonTest extends TestCase
 {
     /**
