@@ -493,6 +493,28 @@ class Standard extends AbstractExtension
                     'required' => true
                 )
             )
-        )
+        ),
+        'range' => array(
+            'type' => FunctionReflection::TYPE_RUNNABLE,
+            'return-type' => Types::ARRAY_TYPE,
+            'parameters' => array(
+                array(
+                    'name' => 'start',
+                    'type' => Types::MIXED,
+                    'required' => true
+                ),
+                array(
+                    'name' => 'end',
+                    'type' => Types::MIXED,
+                    'required' => true
+                ),
+                array(
+                    'name' => 'step',
+                    'type' => Types::NUMBER,
+                    'required' => false,
+                    'default' => 1
+                )
+            )
+        ),
     );
 }
