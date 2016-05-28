@@ -127,5 +127,42 @@ class Curl extends AbstractExtension
                 )
             )
         ),
+        'curl_setopt' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::RESOURCE_TYPE,
+                    'required' => true,
+                    'name' => 'ch'
+                ),
+                array(
+                    'type' => Types::INT_TYPE,
+                    'required' => true,
+                    'name' => 'option'
+                ),
+                array(
+                    'type' => Types::MIXED,
+                    'required' => true,
+                    'name' => 'value'
+                )
+            )
+        ),
+        'curl_setopt_array' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'type' => Types::RESOURCE_TYPE,
+                    'required' => true,
+                    'name' => 'ch'
+                ),
+                array(
+                    'type' => Types::ARRAY_TYPE,
+                    'required' => true,
+                    'name' => 'options'
+                )
+            )
+        ),
     );
 }
