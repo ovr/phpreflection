@@ -478,5 +478,21 @@ class Standard extends AbstractExtension
             'return-type' => Types::STRING_TYPE,
             'parameters' => array()
         ),
+        'sys_get_temp_dir' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::STRING_TYPE,
+            'parameters' => array()
+        ),
+        'dl' => array(
+            'type' => FunctionReflection::TYPE_UNDEFINED,
+            'return-type' => Types::BOOLEAN_TYPE,
+            'parameters' => array(
+                array(
+                    'name' => 'library',
+                    'type' => Types::STRING_TYPE,
+                    'required' => true
+                )
+            )
+        )
     );
 }
