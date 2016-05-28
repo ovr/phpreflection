@@ -13,6 +13,7 @@ class Core implements CoreInterface
         $this->extensions = new \SplObjectStorage();
         $this->extensions->attach(new Standard());
         $this->extensions->attach(new JSON());
+        $this->extensions->attach(new Curl());
     }
 
     public function getFunction($name)
