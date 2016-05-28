@@ -7,14 +7,14 @@ class Reflector
     /**
      * @var Manually\CoreInterface
      */
-    protected $manually;
+    protected $core;
 
     /**
      * @param Manually\CoreInterface $manually
      */
     public function __construct(Manually\CoreInterface $manually)
     {
-        $this->manually = $manually;
+        $this->core = $manually;
     }
 
     /**
@@ -25,7 +25,7 @@ class Reflector
      */
     public function getFunction($name)
     {
-        return $this->manually->getFunction($name);
+        return $this->core->getFunction($name);
     }
 
     /**
@@ -38,5 +38,13 @@ class Reflector
         }
 
         return new Manually\PHP56\Core();
+    }
+
+    /**
+     * @return Manually\CoreInterface
+     */
+    public function getCore()
+    {
+        return $this->core;
     }
 }

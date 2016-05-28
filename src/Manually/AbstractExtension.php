@@ -74,4 +74,12 @@ abstract class AbstractExtension
 
         return false;
     }
+
+    /**
+     * @return string[]
+     */
+    public function getFunctionNames()
+    {
+        return array_keys($this->functions);
+    }
 }

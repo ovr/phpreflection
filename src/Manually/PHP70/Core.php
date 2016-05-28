@@ -6,14 +6,35 @@ use Ovr\PHPReflection\Manually\CoreInterface;
 
 class Core implements CoreInterface
 {
-    protected $extensions;
+    /**
+     * @var \Ovr\PHPReflection\Manually\AbstractExtension[]
+     */
+    protected $extensions = [];
 
     public function __construct()
     {
-        $this->extensions = new \SplObjectStorage();
-        $this->extensions->attach(new Standard());
-        $this->extensions->attach(new JSON());
-        $this->extensions->attach(new Curl());
+        $ext = new Standard();
+        $this->extensions[$ext->getName()] = $ext;
+
+        $ext = new JSON();
+        $this->extensions[$ext->getName()] = $ext;
+
+        $ext = new Curl();
+        $this->extensions[$ext->getName()] = $ext;
+    }
+
+    /**
+     * @param string $name
+     * @return \Ovr\PHPReflection\Manually\AbstractExtension
+     * @throws \ReflectionException
+     */
+    public function getExtension($name)
+    {
+        if (isset($this->extensions[$name])) {
+            return $this->extensions[$name];
+        }
+
+        throw new \ReflectionException('Extension ' . $name . ' is not defined');
     }
 
     public function getFunction($name)
