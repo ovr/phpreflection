@@ -153,10 +153,14 @@ class FunctionReflection
     }
 
     /**
-     * @return ReflectionParameter|boolean
+     * @return ReflectionParameter|null
      */
     public function getParameter($key)
     {
-        return $this->parameters[$key];
+        if (isset($this->parameters[$key])) {
+            return $this->parameters[$key];
+        }
+
+        return null;
     }
 }
